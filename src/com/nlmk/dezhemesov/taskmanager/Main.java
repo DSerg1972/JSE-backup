@@ -26,11 +26,11 @@ public class Main {
         if (args == null) return;
         if (args.length < 1) return;
         switch (args[0]) {
-            case ABOUT:
+            case KEY_ABOUT:
                 showAbout();
-            case HELP:
+            case KEY_HELP:
                 showHelp();
-            case VERSION:
+            case KEY_VERSION:
                 showVersion();
             default:
                 showUnknownKey(args[0]);
@@ -39,6 +39,7 @@ public class Main {
 
     private static void showAbout() {
         System.out.println("Author: Serge Dezhemesov");
+        System.out.println("        dserg1972@gmail.com");
         System.exit(0);
     }
 
@@ -49,6 +50,9 @@ public class Main {
 
     private static void showHelp() {
         System.out.println("Usage: java -jar taskmanager.jar [about|help|version]");
+        System.out.println("  about   - display developer info" );
+        System.out.println("  help    - display usage" );
+        System.out.println("  version - display version info" );
         System.exit(0);
     }
 

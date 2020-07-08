@@ -7,13 +7,13 @@ public class Console {
     /**
      * Сведения об авторе
      */
-    public static final String ABOUT = "about";
+    public static final String KEY_ABOUT = "about";
     /**
      * Помощь по ключам запуска
      */
-    public static final String HELP = "help";
+    public static final String KEY_HELP = "help";
     /**
      * Сведения о версии
      */
-    public static final String VERSION = "version";
+    public static final String KEY_VERSION = "version";
 }

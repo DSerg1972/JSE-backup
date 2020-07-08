@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.nlmk.dezhemesov.taskmanager.constants","l":"Console"},{"p":"com.nlmk.dezhemesov.taskmanager","l":"Main"}]

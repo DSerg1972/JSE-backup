@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: com.nlmk.javase.taskmanager.Main
+Main-Class: com.nlmk.dezhemesov.taskmanager.Main

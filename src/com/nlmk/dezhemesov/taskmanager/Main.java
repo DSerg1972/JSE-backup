@@ -37,9 +37,6 @@ public class Main {
         }
     }
 
-    /**
-     *
-     */
     private static void showAbout() {
         System.out.println("Author: Serge Dezhemesov");
         System.exit(0);

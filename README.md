@@ -1,8 +1,12 @@
-# Проект: TASK MANAGER
----
-_Требования_ _к_ _SOFTWARE:_   **Open JDK 11**
-_Используемые_ _технологии:_   ** Java, Apache Maven**
-_Разраотчик:_                  ** Дежемесов Сергей **
-                               ** dezhemesov_sa@nlmk.com**
-_Сборка:_                      **```sh mvn clean install```**
-_Запуск:_                      **```sh java -jar taskmanager.jar```**
+*РџСЂРѕРµРєС‚:* **TASK MANAGER**
+
+
+*РўСЂРµР±РѕРІР°РЅРёСЏ Рє Software:* **Open JDK 11**
+
+*РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё:*  **Java, Apache Maven**
+
+*Р Р°Р·СЂР°Р±РѕС‚С‡РёРє:* **Р”РµР¶РµРјРµСЃРѕРІ РЎРµСЂРіРµР№** email:dezhemesov_sa@nlmk.com
+                              
+*РЎР±РѕСЂРєР°:* `mvn clean install`
+
+*Р—Р°РїСѓСЃРє:* `sh java -jar taskmanager.jar`

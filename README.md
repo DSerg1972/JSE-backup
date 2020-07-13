@@ -1,4 +1,4 @@
-*Проект:* **TASK MANAGER**
+###### *Проект:* **TASK MANAGER**
 
 
 *Требования к Software:* **Open JDK 11**
@@ -9,4 +9,4 @@
                               
 *Сборка:* `mvn clean install`
 
-*Запуск:* `sh java -jar taskmanager.jar`
+*Запуск:* `java -jar taskmanager.jar`

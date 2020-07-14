@@ -9,4 +9,4 @@
                               
 *Сборка:* `mvn clean install`
 
-*Запуск:* `java -jar taskmanager.jar`
+*Запуск:* `java -jar task-manager-1.0.0.jar`

@@ -1,5 +1,7 @@
 package com.nlmk.dezhemesov.taskmanager;
 
+import java.util.Scanner;
+
 import static com.nlmk.dezhemesov.taskmanager.constants.Console.*;
 
 /**
@@ -14,8 +16,22 @@ public class App {
      * @param args - аргументы командной строки
      */
     public static void main(final String[] args) {
-        processKeys(args);
-        System.out.println("*** WELCOME TO THE TASK MANAGER ***");
+        run(args);
+        displayWelcome();
+        process();
+    }
+
+    /**
+     * Основной цикл обработки интерактивных команд
+     */
+    private static void process() {
+        final Scanner scanner = new Scanner(System.in);
+        String command = "";
+        while (!EXIT.equals(command)) {
+            command = scanner.nextLine();
+            run(command);
+            System.out.println();
+        }
     }
 
     /**
@@ -23,46 +39,89 @@ public class App {
      *
      * @param args аргументы командной строки
      */
-    private static void processKeys(String[] args) {
+    private static void run(String[] args) {
         if (args == null) return;
         if (args.length < 1) return;
-        switch (args[0]) {
-            case KEY_ABOUT:
-                showAbout();
-            case KEY_HELP:
-                showHelp();
-            case KEY_VERSION:
-                showVersion();
+        String command = args[0];
+        int result = run(command);
+        System.exit(result);
+    }
+
+    /**
+     * Обработчик команды
+     *
+     * @param command команда на исполнение
+     * @return результат выполнения команды
+     */
+    private static int run(final String command) {
+        if (command == null || command.isEmpty()) return -1;
+        switch (command) {
+            case VERSION:
+                return displayVersion();
+            case ABOUT:
+                return displayAbout();
+            case HELP:
+                return displayHelp();
+            case EXIT:
+                return exit();
             default:
-                showUnknownKey(args[0]);
+                return displayError();
         }
     }
 
-    private static void showAbout() {
+    /**
+     * Вывод строки-приветствия
+     */
+    private static void displayWelcome() {
+        System.out.println("*** WELCOME TO THE TASK MANAGER ***");
+    }
+
+    /**
+     * Сведения о программе
+     */
+    private static int displayAbout() {
         System.out.println("Author: Serge Dezhemesov");
         System.out.println("        dserg1972@gmail.com");
-        System.exit(0);
+        return 0;
     }
 
-    private static void showVersion() {
+    /**
+     * Сведенеия о версии
+     */
+    private static int displayVersion() {
         System.out.println("Version: 1.0.0");
-        System.exit(0);
+        return 0;
     }
 
-    private static void showHelp() {
+    /**
+     * Перечень команд
+     */
+    private static int displayHelp() {
         System.out.println("Usage: java -jar taskmanager.jar [about|help|version]");
         System.out.println("  about   - display developer info");
         System.out.println("  help    - display usage");
         System.out.println("  version - display version info");
-        System.exit(0);
+        System.out.println("  exit    - terminate program");
+        return 0;
     }
 
     /**
-     * @param key значение неподдерживаемого ключа
+     * Сообщение об ошибочной команде
      */
-    private static void showUnknownKey(String key) {
-        System.out.println("Unknown key: \"" + key + "\"");
-        System.exit(1);
+    private static int displayError() {
+        System.out.println("Unknown command");
+        return -1;
+    }
+
+    /**
+     * Обработка команды выхода из программы
+     *
+     * @return результат вызова
+     */
+    private static int exit() {
+        System.out.println("Terminating program ...");
+        System.exit(0);
+        return 0;
     }
 
 }

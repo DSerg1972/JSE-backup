@@ -20,11 +20,11 @@
 
 #### Сборка проекта
 ```shell script
-#очистка и сборка в локальный репозиторий
+# очистка и сборка в локальный репозиторий
 mvn clean package
 ```
 ```shell script
-#построение javadoc
+# построение javadoc
 mvn javadoc:jar
 ```
 

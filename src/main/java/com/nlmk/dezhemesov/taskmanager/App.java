@@ -51,6 +51,22 @@ public class App {
     }
 
     /**
+     * Чтение целочисленного значения из системного ввода
+     *
+     * @return введённая строка, интерпретированная как целочисленное значение
+     */
+    private static Integer readInteger() {
+
+        Integer value = null;
+        try {
+            Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException ex) {
+            System.out.println("Can't parse integer value");
+        }
+        return value;
+    }
+
+    /**
      * Основной цикл обработки интерактивных команд
      */
     private static void process() {

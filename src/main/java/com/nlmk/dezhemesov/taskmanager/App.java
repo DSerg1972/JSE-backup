@@ -109,6 +109,11 @@ public class App {
         }
     }
 
+    /**
+     * Добавление проекта в хранилище
+     *
+     * @return код возврата
+     */
     private static int createProject() {
         System.out.println("[CREATE PROJECT]");
         System.out.print("Enter project name: ");
@@ -118,6 +123,11 @@ public class App {
         return 0;
     }
 
+    /**
+     * Вывод списка проектов в хранилище
+     *
+     * @return код возврата
+     */
     private static int listProject() {
         System.out.println("[LIST PROJECT]");
         System.out.println(projects.findAll());
@@ -125,6 +135,11 @@ public class App {
         return 0;
     }
 
+    /**
+     * Удаление всех проектов из хранилища
+     *
+     * @return код возврата
+     */
     private static int clearProject() {
         System.out.println("[CLEAR PROJECT]");
         projects.clear();
@@ -132,6 +147,11 @@ public class App {
         return 0;
     }
 
+    /**
+     * Добавление задачи в хранилище
+     *
+     * @return код возврата
+     */
     private static int createTask() {
         System.out.println("[CREATE TASK]");
         System.out.print("Enter task name: ");
@@ -142,6 +162,11 @@ public class App {
         return 0;
     }
 
+    /**
+     * Вывод списка задач в хранилище
+     *
+     * @return код возврата
+     */
     private static int listTask() {
         System.out.println("[LIST TASK]");
         System.out.println(tasks.findAll());
@@ -149,6 +174,11 @@ public class App {
         return 0;
     }
 
+    /**
+     * Удаление всех задач из хранилища
+     *
+     * @return код возврата
+     */
     private static int clearTask() {
         System.out.println("[CLEAR TASK]");
         tasks.clear();

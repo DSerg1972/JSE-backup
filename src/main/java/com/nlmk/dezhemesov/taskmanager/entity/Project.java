@@ -8,7 +8,7 @@ public class Project {
     /**
      * Идентификатор экземпляра
      */
-    private long id = System.nanoTime();
+    private Long id = System.nanoTime();
 
     /**
      * Имя проекта
@@ -21,11 +21,38 @@ public class Project {
     private String description = "";
 
     /**
+     * Конструктор по умолчанию
+     */
+    public Project() {
+
+    }
+
+    /**
+     * Конструктор с указанием имени проекта
+     *
+     * @param name Имя проекта
+     */
+    public Project(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Конструктор с заданием имени и описания проекта
+     *
+     * @param name        имя проекта
+     * @param description описание проекта
+     */
+    public Project(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    /**
      * Получение идентификатора экземпляра
      *
      * @return Идентификатор экземпляра проекта
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

@@ -4,7 +4,7 @@ public class Task {
     /**
      * Идентификатор экземпляра
      */
-    private long id = System.nanoTime();
+    private Long id = System.nanoTime();
 
     /**
      * Имя задачи
@@ -17,11 +17,38 @@ public class Task {
     private String description = "";
 
     /**
+     * Конструктор по умолчанию
+     */
+    public Task() {
+
+    }
+
+    /**
+     * Конструктор с заданием имени задачи
+     *
+     * @param name имя задачи
+     */
+    public Task(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Конструктор с заданием имени и описания задачи
+     *
+     * @param name        имя задачи
+     * @param description описание задачи
+     */
+    public Task(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    /**
      * Получение идентификатора экземпляра
      *
      * @return Идентификатор экземпляра задачи
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
